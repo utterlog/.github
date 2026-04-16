@@ -49,6 +49,7 @@ docker compose up -d --build
 ## 仓库
 
 - **[utterlog](https://github.com/Utterlog/utterlog)** — 主项目（前端 + 后端 + 管理 SPA + 主题）
+- **[utterlog-sync](https://github.com/Utterlog/utterlog-sync)** — WordPress 插件（导出 `.ulbk` 包或直推到 Utterlog 站点）
 
 ## 贡献
 
