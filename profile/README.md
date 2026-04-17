@@ -4,57 +4,81 @@
 
 # Utterlog
 
-**现代化博客平台 · Modern self-hosted blogging**
-
-[utterlog.io](https://utterlog.io) · [dev@utterlog.com](mailto:dev@utterlog.com)
+**为独立作者打造的一体化内容平台**
 
 </div>
+
+<p align="center">
+  <a href="https://demo.utterlog.io"><img src="https://img.shields.io/badge/Live%20Demo-demo.utterlog.io-22c55e?style=for-the-badge&logo=safari&logoColor=white" alt="Live Demo"></a>
+  <a href="https://utterlog.io"><img src="https://img.shields.io/badge/Project-utterlog.io-3b82f6?style=for-the-badge&logo=hugo&logoColor=white" alt="Project Site"></a>
+  <a href="https://utterlog.com"><img src="https://img.shields.io/badge/Network-utterlog.com-8b5cf6?style=for-the-badge&logo=mastodon&logoColor=white" alt="Federation Hub"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Utterlog/utterlog/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/Utterlog/utterlog/ci.yml?branch=main&style=flat-square&label=CI" alt="CI"></a>
+  <a href="https://github.com/Utterlog/utterlog/actions/workflows/docker-publish.yml"><img src="https://img.shields.io/github/actions/workflow/status/Utterlog/utterlog/docker-publish.yml?branch=main&style=flat-square&label=docker%20images&logo=docker&logoColor=white" alt="Docker images"></a>
+  <a href="https://github.com/Utterlog/utterlog/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Utterlog/utterlog?style=flat-square" alt="License"></a>
+  <img src="https://img.shields.io/github/go-mod/go-version/Utterlog/utterlog?filename=api/go.mod&style=flat-square&logo=go&logoColor=white" alt="Go">
+  <img src="https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=nextdotjs" alt="Next.js">
+  <img src="https://img.shields.io/badge/PostgreSQL-18-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
+</p>
 
 ---
 
 ## 是什么
 
-Utterlog 是一个为独立博主设计的全栈博客系统 —— 兼顾内容创作自由、阅读体验和数据自主。
+为独立博主设计的全栈博客系统：兼顾内容创作自由、阅读体验和数据自主。
 
-- **写作** —— Markdown 编辑器、AI 辅助摘要和点评、段落级评论、图片 EXIF 自动解析
-- **阅读** —— 多主题（Azure / Flux / 2026 / Chred / Westlife）、响应式、自定义页脚按钮、语义搜索
-- **数据主权** —— 完全自部署，支持从 WordPress / Typecho 一键导入
-- **社交** —— Utterlog Network 联盟身份（跨站评论 / 关注 / 段落点评）、Passkey / 2FA 登录
-- **架构** —— Go 1.26 后端 + Next.js 16 前端 + Vite SPA 管理后台（`go:embed` 打入单个二进制）
+- **写作** — Markdown 编辑器、AI 辅助摘要 / 段落点评、图片 EXIF 自动解析、说说卡片流
+- **阅读** — 5 套内置主题、自定义页脚按钮、pgvector 语义搜索、多主题切换
+- **数据主权** — 完全自部署，从 WordPress / Typecho 一键导入
+- **联盟身份** — Utterlog Network OAuth 跨站登录 / 评论 / 关注 / 段落点评，Passkey + 2FA
+- **极简部署** — 一行命令，单端口对外，~600MB 内存可跑
 
-## 快速开始
+## 一行部署
 
 ```bash
-git clone https://github.com/Utterlog/utterlog.git
-cd utterlog
-cp .env.example .env            # 修改 DB_PASSWORD / JWT_SECRET
-cd api/admin && npm install && npm run build && cd ../..
-docker compose up -d --build
-# 浏览器打开 http://localhost:3000 → /install 向导
+curl -fsSL https://raw.githubusercontent.com/Utterlog/utterlog/main/install.sh | bash
 ```
 
-详细说明见仓库 [INSTALL.md](https://github.com/Utterlog/utterlog/blob/main/INSTALL.md)。
+带自动 HTTPS（无现成反代）：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Utterlog/utterlog/main/install.sh | DOMAIN=blog.yoursite.com bash
+```
+
+详细说明：[INSTALL.md](https://github.com/Utterlog/utterlog/blob/main/INSTALL.md)
+
+## 仓库
+
+| 仓库 | 用途 |
+|------|------|
+| **[utterlog](https://github.com/Utterlog/utterlog)** | 主项目 — 后端 (Go) + 博客前端 (Next.js) + 内嵌管理后台 (Vite SPA) |
+| **[utterlog-sync](https://github.com/Utterlog/utterlog-sync)** | WordPress 插件 — 导出 `.ulbk` 包或直推到 Utterlog 站点 |
+| **[.github](https://github.com/Utterlog/.github)** | 组织元数据（本 README + Issue 模板） |
+
+## 三个官方站点
+
+| 域名 | 角色 |
+|------|------|
+| [utterlog.io](https://utterlog.io) | 项目主站（文档、下载、博客） |
+| [demo.utterlog.io](https://demo.utterlog.io) | 在线 Demo —— 体验完整功能 |
+| [utterlog.com](https://utterlog.com) | 联盟中心 —— 自托管站点的内容聚合 + 跨站身份 |
 
 ## 技术栈
 
 | 层 | 技术 |
 |---|---|
-| 前端博客 | Next.js 16 + React 19 + TypeScript |
-| 管理后台 | Vite + React + React Router + Zustand + TanStack Query |
-| 后端 API | Go 1.26 + Gin + sqlx |
-| 数据库 | PostgreSQL 18（pgvector 语义搜索） |
-| 缓存 | Redis 7 |
-| 部署 | Docker Compose |
-
-## 仓库
-
-- **[utterlog](https://github.com/Utterlog/utterlog)** — 主项目（前端 + 后端 + 管理 SPA + 主题）
-- **[utterlog-sync](https://github.com/Utterlog/utterlog-sync)** — WordPress 插件（导出 `.ulbk` 包或直推到 Utterlog 站点）
+| 博客前端 | Next.js 16 + React 19 + TypeScript 6 |
+| 管理后台 | Vite + React + Zustand + TanStack Query（go:embed 内嵌） |
+| 后端 | Go 1.26 + Gin + sqlx |
+| 数据 | PostgreSQL 18 (pgvector) + Redis 7 |
+| 部署 | Docker Compose + 可选内置 Caddy |
 
 ## 贡献
 
-Issues / Pull Requests 欢迎。写作、翻译、主题和插件同样欢迎。
+Issues / Pull Requests 欢迎。写作、翻译、主题、插件同样欢迎。
 
 ## 许可
 
-MIT
+MIT — 详见各仓库 LICENSE
