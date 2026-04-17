@@ -15,10 +15,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Utterlog/utterlog/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/Utterlog/utterlog/ci.yml?branch=main&style=flat-square&label=CI" alt="CI"></a>
-  <a href="https://github.com/Utterlog/utterlog/actions/workflows/docker-publish.yml"><img src="https://img.shields.io/github/actions/workflow/status/Utterlog/utterlog/docker-publish.yml?branch=main&style=flat-square&label=docker%20images&logo=docker&logoColor=white" alt="Docker images"></a>
-  <a href="https://github.com/Utterlog/utterlog/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Utterlog/utterlog?style=flat-square" alt="License"></a>
-  <img src="https://img.shields.io/github/go-mod/go-version/Utterlog/utterlog?filename=api/go.mod&style=flat-square&logo=go&logoColor=white" alt="Go">
+  <a href="https://github.com/utterlog/utterlog/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/utterlog/utterlog/ci.yml?branch=main&style=flat-square&label=CI" alt="CI"></a>
+  <a href="https://github.com/utterlog/utterlog/actions/workflows/docker-publish.yml"><img src="https://img.shields.io/github/actions/workflow/status/utterlog/utterlog/docker-publish.yml?branch=main&style=flat-square&label=docker%20images&logo=docker&logoColor=white" alt="Docker images"></a>
+  <a href="https://github.com/utterlog/utterlog/blob/main/LICENSE"><img src="https://img.shields.io/github/license/utterlog/utterlog?style=flat-square" alt="License"></a>
+  <img src="https://img.shields.io/github/go-mod/go-version/utterlog/utterlog?filename=api/go.mod&style=flat-square&logo=go&logoColor=white" alt="Go">
   <img src="https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=nextdotjs" alt="Next.js">
   <img src="https://img.shields.io/badge/PostgreSQL-18-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
 </p>
@@ -38,24 +38,24 @@
 ## 一行部署
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Utterlog/utterlog/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/utterlog/utterlog/main/install.sh | bash
 ```
 
 带自动 HTTPS（无现成反代）：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Utterlog/utterlog/main/install.sh | DOMAIN=blog.yoursite.com bash
+curl -fsSL https://raw.githubusercontent.com/utterlog/utterlog/main/install.sh | DOMAIN=blog.yoursite.com bash
 ```
 
-详细说明：[INSTALL.md](https://github.com/Utterlog/utterlog/blob/main/INSTALL.md)
+详细说明：[INSTALL.md](https://github.com/utterlog/utterlog/blob/main/INSTALL.md)
 
 ## 仓库
 
 | 仓库 | 用途 |
 |------|------|
-| **[utterlog](https://github.com/Utterlog/utterlog)** | 主项目 — 后端 (Go) + 博客前端 (Next.js) + 内嵌管理后台 (Vite SPA) |
-| **[utterlog-sync](https://github.com/Utterlog/utterlog-sync)** | WordPress 插件 — 导出 `.ulbk` 包或直推到 Utterlog 站点 |
-| **[.github](https://github.com/Utterlog/.github)** | 组织元数据（本 README + Issue 模板） |
+| **[utterlog](https://github.com/utterlog/utterlog)** | 主项目 — 后端 (Go) + 博客前端 (Next.js) + 内嵌管理后台 (Vite SPA) |
+| **[utterlog-sync](https://github.com/utterlog/utterlog-sync)** | WordPress 插件 — 导出 `.ulbk` 包或直推到 Utterlog 站点 |
+| **[.github](https://github.com/utterlog/.github)** | 组织元数据（本 README + Issue 模板） |
 
 ## 三个官方站点
 
