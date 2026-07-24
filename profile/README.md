@@ -9,7 +9,6 @@
 </div>
 
 <p align="center">
-  <a href="https://demo.utterlog.io"><img src="https://img.shields.io/badge/在线演示-demo.utterlog.io-22c55e?style=for-the-badge&logo=safari&logoColor=white" alt="Demo"></a>
   <a href="https://utterlog.io"><img src="https://img.shields.io/badge/产品主页-utterlog.io-3b82f6?style=for-the-badge" alt="Website"></a>
   <a href="https://utterlog.com"><img src="https://img.shields.io/badge/联盟中心-utterlog.com-8b5cf6?style=for-the-badge&logo=mastodon&logoColor=white" alt="Network"></a>
 </p>
@@ -44,7 +43,6 @@ curl -fsSL https://utterlog.io/install.sh | bash
 | 域名 | 角色 |
 |------|------|
 | [utterlog.io](https://utterlog.io) | 产品主页、文档、下载 |
-| [demo.utterlog.io](https://demo.utterlog.io) | 在线 Demo |
 | [utterlog.com](https://utterlog.com) | 联盟中心 — 跨站身份与内容聚合 |
 
 ## 技术栈
