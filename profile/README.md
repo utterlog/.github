@@ -16,10 +16,9 @@
 
 <p align="center">
   <a href="https://github.com/utterlog/utterlog/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/utterlog/utterlog/ci.yml?branch=main&style=flat-square&label=CI" alt="CI"></a>
-  <a href="https://github.com/utterlog/utterlog/actions/workflows/docker-publish.yml"><img src="https://img.shields.io/github/actions/workflow/status/utterlog/utterlog/docker-publish.yml?branch=main&style=flat-square&label=Docker&logo=docker&logoColor=white" alt="Docker"></a>
   <a href="https://github.com/utterlog/utterlog/blob/main/LICENSE"><img src="https://img.shields.io/github/license/utterlog/utterlog?style=flat-square" alt="License"></a>
   <img src="https://img.shields.io/badge/Bun-TypeScript-f9f1e1?style=flat-square&logo=bun&logoColor=black" alt="Bun">
-  <img src="https://img.shields.io/badge/PostgreSQL-18-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
+  <img src="https://img.shields.io/badge/PostgreSQL-19-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
 </p>
 
 ---
@@ -36,7 +35,7 @@ curl -fsSL https://utterlog.io/install.sh | bash
 
 | 仓库 | 用途 |
 |------|------|
-| **[utterlog](https://github.com/utterlog/utterlog)** | 主项目 — Bun + Hono + React SSR + 管理后台 |
+| **[utterlog](https://github.com/utterlog/utterlog)** | 主项目 — Bun + TanStack Start + React 19 SSR + 管理后台 |
 | **[utterlog-sync](https://github.com/utterlog/utterlog-sync)** | WordPress 导入 / 同步插件 |
 | **[UtterlogSync](https://github.com/utterlog/UtterlogSync)** | Typecho 同步插件 |
 
@@ -50,7 +49,7 @@ curl -fsSL https://utterlog.io/install.sh | bash
 
 ## 技术栈
 
-Bun · Hono · React · PostgreSQL · Docker Compose
+Bun · TanStack Start · React 19 · PostgreSQL + pgvector · systemd
 
 ## 贡献
 
