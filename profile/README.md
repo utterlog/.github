@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://utterlog.io/icon.svg" width="96" height="96" alt="Utterlog" />
+<img src="https://raw.githubusercontent.com/utterlog/utterlog/main/app/start/src/web/public/favicon.svg" width="96" height="96" alt="Utterlog" />
 
 # Utterlog
 
